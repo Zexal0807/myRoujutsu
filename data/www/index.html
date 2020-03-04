@@ -4,7 +4,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 		<title>MyRoujutsu</title>
-        <style>
+        <script src="js.js"></script>
+		<style>
 			#appbody{
 				margin: 0px;
 				overflow: hidden;
@@ -19,29 +20,8 @@
     </head>
     <body id="appbody">
 		<script type="text/javascript" src="cordova.js"></script>
+		
 		<iframe src="https://www.roujutsu.it/home"></iframe>
 		<button onclick="sw()" >CLICK</button>
-		<script>
-document.addEventListener('deviceready', function () {
-    alert(cordova.plugins.notification.local.launchDetails);
-	
-	cordova.plugins.notification.local.schedule({
-				id: 2,
-    title: 'My first notification',
-    text: 'Thats pretty easy...'
-	});
-	
-}, false);
-			
-			function sw(){
-				cordova.plugins.notification.local.schedule({
-					id : 1,
-					title: 'My first notification',
-					text: 'Thats pretty easy...'
-				});
-			}
-
-		</script>
-			
     </body>
 </html>
