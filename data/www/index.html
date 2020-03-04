@@ -16,25 +16,24 @@
 				height: 100%;
 			}
 		</style>
-		<script>
-document.addEventListener("deviceready", function () {
-    console.log(navigator.notification);
-	
-}, false);
-			
-navigator.notification.alert(
-    'You are the winner!',  // message
-    function (){			// callback
-		
-	}    
-    'Game Over',            // title
-    'Done'                  // buttonName
-);
-
-		</script>
     </head>
     <body id="appbody">
 		<iframe src="https://www.roujutsu.it/home"></iframe>
 		<script type="text/javascript" src="cordova.js"></script>
+		<script>
+			document.addEventListener("deviceready", function () {
+				console.log(navigator.notification);
+			}, false);
+
+			navigator.notification.alert(
+				'You are the winner!',  // message
+				function () {
+				// do something
+				},				        // callback
+				'Game Over',            // title
+				'Done'                  // buttonName
+			);
+			
+		</script>
     </body>
 </html>
