@@ -22,19 +22,23 @@
 		<iframe src="https://www.roujutsu.it/home"></iframe>
 		<button onclick="sw()" >CLICK</button>
 		<script>
-			document.addEventListener("deviceready", function () {
-				alert(navigator.notification);
-			}, false);
 			function sw(){
-				navigator.notification.prompt(
-					'You are the winner!',  // message
-					function (res) {
-						// do something
-					},				        // callback
-					'Game Over'            // title
-					//'Done'                  // buttonName
-				);
+				if (“Notification” in window) {
+  Notification.requestPermission(function (permission) {
+    // If the user accepts, let’s create a notification
+    if (permission === ‘granted’) {
+      var notification = new Notification(“My title”, {
+           tag: ‘message1’, 
+           body: “My body” 
+      }); 
+      notification.onshow  = function() { console.log(‘show’); };
+      notification.onclose = function() { console.log(‘close’); };
+      notification.onclick = function() { console.log(‘click’); };
+    }
+  });
+}
 			}
 		</script>
+			
     </body>
 </html>
