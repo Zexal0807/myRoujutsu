@@ -28,15 +28,15 @@ document.addEventListener('deviceready', function () {
 			
 			function sw(){
 cordova.plugins.notification.local.schedule({
+	id : 1,
     title: 'My first notification',
-    text: 'Thats pretty easy...',
-    foreground: true
+    text: 'Thats pretty easy...'
 });
 			}
 			cordova.plugins.notification.local.schedule({
+				id: 2,
     title: 'My first notification',
-    text: 'Thats pretty easy...',
-    foreground: true
+    text: 'Thats pretty easy...'
 });
 		</script>
 			
