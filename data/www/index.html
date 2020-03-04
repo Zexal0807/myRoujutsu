@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+		<title>MyRoujutsu</title>
+        <style>
+			#appbody{
+				margin: 0px;
+				overflow: hidden;
+				height: 100vh;
+			}
+			#appbody > iframe{
+				border-width: 0;
+				width: 100vw;
+				height: 100%;
+			}
+		</style>
+		<script>
+if (“Notification” in window) {
+  Notification.requestPermission(function (permission) {
+    // If the user accepts, let’s create a notification
+    if (permission === ‘granted’) {
+      var notification = new Notification(“My title”, {
+           tag: ‘message1’, 
+           body: “My body” 
+      }); 
+      notification.onshow  = function() { console.log(‘show’); };
+      notification.onclose = function() { console.log(‘close’); };
+      notification.onclick = function() { console.log(‘click’); };
+    }
+  });
+}
+		</script>
+    </head>
+    <body id="appbody">
+		<iframe src="https://www.roujutsu.it/home"></iframe>
+		<script type="text/javascript" src="cordova.js"></script>
+    </body>
+</html>
