@@ -11,7 +11,7 @@
 
 	<plugin name="cordova-plugin-whitelist" spec="1" />
 	<plugin name="cordova-plugin-headercolor" />
-
+	<plugin name="phonegap-plugin-local-notification" />
 
 	<access origin="*" launch-external="no" />
 	<allow-navigation href="http://*/*" />
@@ -19,10 +19,8 @@
 
 	<preference name="android-build-tool" value="ant|gradle" />
 	<preference name="android-minSdkVersion" value="10" />
-	<preference name="android-targetSdkVersion" value="28" />
+	
 	<preference name="HeaderColor" value="#ff2626" />
-
-	<plugin name="phonegap-plugin-local-notification" />
 
 	<platform name="ios">
 		<icon src="res/icon/ios/icon-1024.png" width="1024" height="1024" />
