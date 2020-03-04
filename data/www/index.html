@@ -22,22 +22,22 @@
 		<iframe src="https://www.roujutsu.it/home"></iframe>
 		<button onclick="sw()" >CLICK</button>
 		<script>
+document.addEventListener('deviceready', function () {
+    alert(cordova.plugins.notification.local.launchDetails);
+}, false);
+			
 			function sw(){
-				if (“Notification” in window) {
-  Notification.requestPermission(function (permission) {
-    // If the user accepts, let’s create a notification
-    if (permission === ‘granted’) {
-      var notification = new Notification(“My title”, {
-           tag: ‘message1’, 
-           body: “My body” 
-      }); 
-      notification.onshow  = function() { console.log(‘show’); };
-      notification.onclose = function() { console.log(‘close’); };
-      notification.onclick = function() { console.log(‘click’); };
-    }
-  });
-}
+cordova.plugins.notification.local.schedule({
+    title: 'My first notification',
+    text: 'Thats pretty easy...',
+    foreground: true
+});
 			}
+			cordova.plugins.notification.local.schedule({
+    title: 'My first notification',
+    text: 'Thats pretty easy...',
+    foreground: true
+});
 		</script>
 			
     </body>
