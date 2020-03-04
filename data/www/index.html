@@ -20,20 +20,21 @@
     <body id="appbody">
 		<script type="text/javascript" src="cordova.js"></script>
 		<iframe src="https://www.roujutsu.it/home"></iframe>
+		<button onclick="sw()" >CLICK</button>
 		<script>
 			document.addEventListener("deviceready", function () {
-				console.log(navigator.notification);
+				alert(navigator.notification);
 			}, false);
-
-			navigator.notification.alert(
-				'You are the winner!',  // message
-				function () {
-				// do something
-				},				        // callback
-				'Game Over',            // title
-				'Done'                  // buttonName
-			);
-			
+			function sw(){
+				navigator.notification.prompt(
+					'You are the winner!',  // message
+					function (res) {
+						// do something
+					},				        // callback
+					'Game Over'            // title
+					//'Done'                  // buttonName
+				);
+			}
 		</script>
     </body>
 </html>
