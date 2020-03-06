@@ -15,16 +15,17 @@
 	<plugin name="cordova-plugin-statusbar" spec="2.4.3" />
 	<plugin name="cordova-plugin-whitelist" spec="1.3.4" />
 	
-	<plugin name="cordova-plugin-autostart" />
-	
 	<access origin="*"/>
 	
 	<preference name="android-build-tool" value="ant|gradle" />
-	<preference name="android-minSdkVersion" value="14" />
 	<preference name="android-targetSdkVersion" value="28" />
 	
 	<plugin name="cordova-plugin-local-notification" spec="0.9.0-beta.2" />
 	<preference name="HeaderColor" value="#ff2626" />
+	
+	<plugin name="pushbots-cordova-plugin" spec="1.6.14" source="npm" />
+	<preference name="android-minSdkVersion" value="19" />
+	<preference name="phonegap-version" value="cli-9.0.0" />
 	
 	<platform name="ios">
 		<icon src="res/icon/ios/icon-1024.png" width="1024" height="1024"/>
