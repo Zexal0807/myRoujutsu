@@ -63,7 +63,10 @@
       "id": "phonegap-plugin-push@2.3.0"
     },
     "is_top_level": true,
-    "variables": {}
+    "variables": {
+      "ANDROID_SUPPORT_V13_VERSION": "27.+",
+      "FCM_VERSION": "17.0.+"
+    }
   },
   "cordova-plugin-console": {
     "source": {
@@ -71,6 +74,22 @@
       "id": "cordova-plugin-console"
     },
     "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-support-google-services": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-support-google-services@~1.3.1"
+    },
+    "is_top_level": false,
+    "variables": {}
+  },
+  "phonegap-plugin-multidex": {
+    "source": {
+      "type": "registry",
+      "id": "phonegap-plugin-multidex@~1.0.0"
+    },
+    "is_top_level": false,
     "variables": {}
   }
 }
