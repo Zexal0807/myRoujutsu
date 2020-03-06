@@ -1,8 +1,5 @@
 document.addEventListener('deviceready', function () {
 	
-	window.plugins.PushbotsPlugin.initialize("5e6250782ce1df73b63e6263", {"android":{"sender_id":"430881925689"}});
-	
-	
     alert(cordova.plugins.notification.local.launchDetails);
 	
 	cordova.plugins.notification.local.schedule({
@@ -10,6 +7,25 @@ document.addEventListener('deviceready', function () {
     	title: 'My first notification',
     	text: 'Thats pretty easy...'
 	});
+	
+	
+	var push = PushNotification.init({
+        android: {}
+    });
+
+    push.on('registration', function(data) {
+        // data.registrationId
+        alert(data.registrationId);
+    });
+
+    push.on('notification', function(data) {
+        alert("Title:" + data.title + " Message:" + data.message);
+    });
+
+    push.on('error', function(e) {
+        alert(e.message)
+    });
+	
 	
 }, false);
 function sw(){
