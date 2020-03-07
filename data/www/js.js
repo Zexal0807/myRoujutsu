@@ -8,7 +8,9 @@ document.addEventListener('deviceready', function () {
 	
 	
 	var push = PushNotification.init({
-        android: {}
+        android: {
+        	senderID: "430881925689"
+        }
     });
 	
 	alert(push);
