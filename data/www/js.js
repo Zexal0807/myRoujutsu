@@ -1,24 +1,21 @@
 document.addEventListener('deviceready', function () {
-	var push = PushNotification.init({
-        android: {
-        	senderID: "430881925689"
-        }
-    });
 	
-	alert(push);
-
-    push.on('registration', function(data) {
-        // data.registrationId
-        alert(data.registrationId);
-    });
-
-    push.on('notification', function(data) {
-        alert("Title:" + data.title + " Message:" + data.message);
-    });
-
-    push.on('error', function(e) {
-        alert(e.message)
-    });
+	FCMPlugin.onTokenRefresh(function(token){
+		alert( token );
+	});
+	FCMPlugin.getToken(function(token){
+		alert(token);
+	});
+	FCMPlugin.subscribeToTopic('topicExample');
+	FCMPlugin.onNotification(function(data){
+		if(data.wasTapped){
+		  //Notification was received on device tray and tapped by the user.
+		  alert( JSON.stringify(data) );
+		}else{
+		  //Notification was received in foreground. Maybe the user needs to be notified.
+		  alert( JSON.stringify(data) );
+		}
+	});	
 	
 	
 }, false);
