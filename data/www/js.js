@@ -1,12 +1,4 @@
 document.addEventListener('deviceready', function () {
-	
-	cordova.plugins.notification.local.schedule({
-		id: 1,
-    	title: 'My first notification',
-    	text: 'Thats pretty easy...'
-	});
-	
-	
 	var push = PushNotification.init({
         android: {
         	senderID: "430881925689"
