@@ -13,6 +13,9 @@
     "cordova-plugin-console": {
       "PACKAGE_NAME": "com.myroujutsu"
     },
+    "cordova-plugin-fcm": {
+      "PACKAGE_NAME": "com.myroujutsu"
+    },
     "cordova-plugin-headercolor": {
       "PACKAGE_NAME": "com.myroujutsu"
     },

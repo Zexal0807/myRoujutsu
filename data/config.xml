@@ -51,9 +51,7 @@
 		<icon src="res/icon/ios/icon-83.5@2x.png" width="167" height="167"/>
 	</platform>
 	<platform name="android">
-		<resource-file src="google-services.json" target="google-services.json" />
 		<resource-file src="google-services.json" target="app/google-services.json" />
-		<resource-file src="google-services.json" target="/google-services.json" />
 		
 		<icon density="ldpi" src="res/icon/android/ldpi.png"/>
 		<icon density="mdpi" src="res/icon/android/mdpi.png"/>
