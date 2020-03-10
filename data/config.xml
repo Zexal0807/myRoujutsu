@@ -19,7 +19,8 @@
 	<preference name="android-build-tool" value="ant|gradle" />
 	<preference name="android-minSdkVersion" value="15" />
 	<preference name="android-targetSdkVersion" value="28"/>
-	
+	<preference name="phonegap-version" value="cli-9.0.0" />
+
 	<plugin name="cordova-plugin-local-notification" spec="0.9.0-beta.2" />
 	<preference name="HeaderColor" value="#ff2626" />
 
