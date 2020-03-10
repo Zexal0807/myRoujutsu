@@ -99,5 +99,13 @@
     },
     "is_top_level": true,
     "variables": {}
+  },
+  "cordova-push-notifications": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-push-notifications"
+    },
+    "is_top_level": true,
+    "variables": {}
   }
 }

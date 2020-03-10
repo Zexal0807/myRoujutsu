@@ -21,13 +21,11 @@
 	<preference name="android-minSdkVersion" value="15" />
 	<preference name="android-targetSdkVersion"/>
 	
+	<plugin name="cordova-push-notifications"/>
+
 	<plugin name="cordova-plugin-local-notification" spec="0.9.0-beta.2" />
 	<preference name="HeaderColor" value="#ff2626" />
-	
-	<preference name='pgb-builder-version' value='2' />
-	
-	<plugin name="cordova-plugin-fcm" spec="2.1.2"/>
-	
+		
 	<platform name="ios">
 		<icon src="res/icon/ios/icon-1024.png" width="1024" height="1024"/>
 		<icon src="res/icon/ios/icon-small.png" width="29" height="29"/>
@@ -51,8 +49,6 @@
 		<icon src="res/icon/ios/icon-83.5@2x.png" width="167" height="167"/>
 	</platform>
 	<platform name="android">
-		<resource-file src="google-services.json" target="app/google-services.json" />
-		
 		<icon density="ldpi" src="res/icon/android/ldpi.png"/>
 		<icon density="mdpi" src="res/icon/android/mdpi.png"/>
 		<icon density="hdpi" src="res/icon/android/hdpi.png"/>
