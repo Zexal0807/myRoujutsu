@@ -44,14 +44,6 @@
       "FCM_VERSION": "17.0.+"
     }
   },
-  "cordova-plugin-console": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-console"
-    },
-    "is_top_level": true,
-    "variables": {}
-  },
   "cordova-push-notifications": {
     "source": {
       "type": "registry",
