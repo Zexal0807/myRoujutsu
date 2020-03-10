@@ -33,17 +33,6 @@
       "ANDROID_SUPPORT_V4_VERSION": "26.+"
     }
   },
-  "phonegap-plugin-push": {
-    "source": {
-      "type": "registry",
-      "id": "phonegap-plugin-push@2.3.0"
-    },
-    "is_top_level": true,
-    "variables": {
-      "ANDROID_SUPPORT_V13_VERSION": "27.+",
-      "FCM_VERSION": "17.0.+"
-    }
-  },
   "cordova-push-notifications": {
     "source": {
       "type": "registry",
