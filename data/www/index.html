@@ -22,6 +22,31 @@
     <body id="appbody">
 		<iframe src="https://www.roujutsu.it/home"></iframe>
 		<button onclick="sw()" >CLICK</button>
-		<ul id="app-status-ul"></ul>
+	
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyADq9n7cTqygJvF8HoaSNduoyUZzGPn870",
+    authDomain: "roujutsupush.firebaseapp.com",
+    databaseURL: "https://roujutsupush.firebaseio.com",
+    projectId: "roujutsupush",
+    storageBucket: "roujutsupush.appspot.com",
+    messagingSenderId: "430881925689",
+    appId: "1:430881925689:web:0e9ba23bc20ce86b25bbe8",
+    measurementId: "G-3P5NEDPQG4"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+
     </body>
 </html>
