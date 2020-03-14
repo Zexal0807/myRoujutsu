@@ -30,5 +30,29 @@
     },
     "is_top_level": true,
     "variables": {}
+  },
+  "cordova-plugin-mfp-push": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-mfp-push"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-mfp": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-mfp@>=8.0.0"
+    },
+    "is_top_level": false,
+    "variables": {}
+  },
+  "cordova-plugin-device": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-device@>=1.0.1"
+    },
+    "is_top_level": false,
+    "variables": {}
   }
 }

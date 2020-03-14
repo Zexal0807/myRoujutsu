@@ -1,35 +1,36 @@
 var push;
 
 document.addEventListener('deviceready', function (){
-    push = PushNotification.init({
-        android: {
-            senderID: "430881925689"
+    var notificationReceived = function(message) {
+        alert(JSON.stringify(message));
+    };
+    MFPPush.initialize (
+        function(successResponse) {
+            alert("Successfully intialized");
+            MFPPush.registerNotificationsCallback(notificationReceived);
         },
-        ios: {
-            alert: "true",
-            badge: "true",
-            sound: "true"
+        function(failureResponse) {
+            alert("Failed to initialize");
+        }
+    );
+    MFPPush.isPushSupported (
+        function(successResponse) {
+            alert("Push Supported: " + successResponse);
         },
-        windows: {}
-    });
-    
-    push.on('registration', function(data){
-        alert(data.registrationId);
-        // data.registrationId
-    });
-    
-    push.on('notification', function(data){
-        alert(data);
-        // data.message,
-        // data.title,
-        // data.count,
-        // data.sound,
-        // data.image,
-        // data.additionalData
-    });
-    
-    push.on('error', function(e){
-        alert(e);
-        // e.message
-    });
+        function(failureResponse) {
+            alert("Failed to get push support status");
+        }
+    );
+    var options = { };
+MFPPush.registerDevice(
+    options,
+    function(successResponse) {
+        alert("Successfully registered");
+    },
+    function(failureResponse) {
+        alert("Failed to register");
+    }
+);
+
+
 }, false);
