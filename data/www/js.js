@@ -5,9 +5,6 @@ document.addEventListener('deviceready', function (){
         android: {
             senderID: "430881925689"
         },
-        browser: {
-            pushServiceURL: 'http://push.api.phonegap.com/v1/push'
-        },
         ios: {
             alert: "true",
             badge: "true",
@@ -17,7 +14,7 @@ document.addEventListener('deviceready', function (){
     });
     
     push.on('registration', function(data){
-        alert(data);
+        alert(data.registrationId);
         // data.registrationId
     });
     
